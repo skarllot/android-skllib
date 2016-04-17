@@ -18,8 +18,43 @@ android {
     }
 }
 
+configurations {
+    javadocDeps
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.3.0'
+    testCompile 'junit:junit:4.12'
+
+    javadocDeps 'com.android.support:support-annotations:23.3.0'
+    javadocDeps 'com.android.support:support-v4:23.3.0'
+    javadocDeps 'com.android.support:appcompat-v7:23.3.0'
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'skllib'
+
+    publishedGroupId = 'com.github.skarllot.android'
+    libraryName = 'SklLib'
+    artifact = 'skllib'
+
+    libraryDescription = 'Android helper library for common tasks'
+
+    siteUrl = 'https://github.com/skarllot/android-skllib'
+    gitUrl = 'https://github.com/skarllot/android-skllib.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'skarllot'
+    developerName = 'Fabricio Godoy'
+    developerEmail = 'skarllot@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'installv1.gradle'
+apply from: 'bintrayv1.gradle'
