@@ -11,10 +11,14 @@
 # Generated files
 bin/
 gen/
+obj/
 
 # Gradle files
 .gradle/
 build/
+
+# Signing files
+.signing/
 
 # Local configuration file (sdk path, etc)
 local.properties
@@ -25,8 +29,29 @@ proguard/
 # Log Files
 *.log
 
-# Android Studio Navigation editor temp files
+# Android Studio
 .navigation/
-
-# Android Studio captures folder
 captures/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse
+.classpath
+.project
+.metadata/
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.swp
+
+/workspace
+/responses
